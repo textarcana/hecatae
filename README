@@ -1,42 +1,54 @@
-# :title:README file for Hecatae
-# = Name
-# Hecatae, the 3-in-1 Validator
-# = Last Modified
-#   Time-stamp: </Users/noah/Documents/github/hecatae/README last changed by Noah Sussman on noah.local/Textarcana Thursday 08 January 2009 at EST 13:33:59>
-# = Synopsis
-# A wrapper for Tidy, onSGMLS and Raakt.
-# = Description
-# 
-# = Todo
-# == Upcoming Features
-# 0. Nothing yet.
-# == Known Issues
-# 0. Tons of unmet dependencies including the W3 DTD library.
-# = References
-# == Validators
-# 0. Tidy [http://www.w3.org/People/Raggett/tidy/]
-# 0. onSGMLS [http://openjade.sourceforge.net/doc/nsgmls.htm]
-# 0. Raakt [http://www.peterkrantz.com/raakt/wiki/]
-# === Firefox Extensions
-# 0. HTML Validator [http://users.skynet.be/mgueury/mozilla/]
-# 0. Firefox Accessibility Extension [http://firefox.cita.uiuc.edu/]
-# 0. WAVE Toolbar [http://wave.webaim.org/toolbar]
-# == Methodologies
-# 0. UWEM [http://www.wabcluster.org/uwem05/]
-# = License
-# This code is provided under the terms of the {MIT License.}[http://www.opensource.org/licenses/mit-license.php]
-#
-#--
-# This code is the proprietary intellectual property of its authors.  It is not intended for publication.
-#++
-# = Authors
-# Noah Sussman
-#
-require 'rubygems'
-# = 
-# ==
-# ==
+:title:README file for Hecatae
+= Name
+Hecatae, the 3-in-1 Validator
+= Synopsis
+    require 'rubygems'
+    require 'hecatae'
+    access = Accessibility.new()
+    page = access.get("http://onemorebug.com")
+    puts "Printing Accessibility Report for OneMoreBug.com:"
+    puts access.raakt_o(page)
+= Description
+A Ruby wrapper for three XHTML validation tools: Tidy, onSGMLS and Raakt.
+== How To Install
+To build and install, use
+    gem build gemspec.rb 
+    sudo gem install Hecatae-0.0.1.gem 
+= Todo
+== Upcoming Features
+0. Nothing yet.
+== Known Issues
+0. Tons of unmet dependencies including the W3 DTD library.
+= References
+This gem source has been created using the boilerplate found on p257 of Practical Ruby Gems by David Berube.
+== Validators
+0. Tidy[http://www.w3.org/People/Raggett/tidy/]
+0. {Onsgmls}[http://openjade.sourceforge.net/doc/nsgmls.htm] (OpenJade)
+0. {Ruby Accessibility Analysis Kit}[http://www.peterkrantz.com/raakt/wiki/]
+0. {Peter's Validation Graphs}[http://blog.peter1402.de/pages/validation_graphs.html] is a Processing-based visualization tool for XHTML validation
+=== Firefox Extensions
+0. {HTML Validator}[http://users.skynet.be/mgueury/mozilla/]
+0. {Accessibility (FAE)}[http://firefox.cita.uiuc.edu/]
+0. {WAVE Toolbar}[http://wave.webaim.org/toolbar]
+0. {Fangs}[http://www.standards-schmandards.com/2006/fangs-for-firefox-15/] Screen-Reader Emulator for Firefox
+=== Online Validators
+0. {W3 Markup Validation Service}[http://validator.w3.org/]
+0. {W3 CSS Validator}[http://jigsaw.w3.org/css-validator/] 
+0. {JSLint}[http://jslint.org] can validate both CSS and JavaScript
+0. {Cynthia Says}[http://www.contentquality.com/] Accessibility validation service
+0. {Graybit}[http://graybit.com/main.php] color contrast testing tool
+== Methodology
+=== XHTML Validation
+0. {Five things to do to a script before handing it over to the next developer}[http://www.wait-till-i.com/2008/02/07/five-things-to-do-to-a-script-before-handing-it-over-to-the-next-developer/]
+0. {Pragmatic Progressive Enhancement}[http://www.wait-till-i.com/2008/05/06/pragmatic-progressive-enhancement/]
+0. {Yahoo! Graded Browser Support Matrix}[http://developer.yahoo.com/yui/articles/gbs/]
+=== Accessibility
+0. {Section 508 Amendment to the Rehabilitation Act of 1973}[http://www.section508.gov/index.cfm?FuseAction=Content&ID=12#Web]
+0. {Checklist of Checkpoints for Web Content Accessibility Guidelines 1.0}[http://www.w3.org/TR/WCAG10/full-checklist.html]
+0. {Unified Web Evaluation Methodology}[http://www.wabcluster.org/uwem05/]
 
-# To build and install, use
-#     gem build gemspec.rb 
-#     sudo gem install Hecatae-0.0.1.gem 
+
+= License
+This code is provided under the terms of the {MIT License.}[http://www.opensource.org/licenses/mit-license.php]
+= Authors
+Noah Sussman
