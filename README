@@ -1,1 +1,42 @@
-Hecatae, the 3-in-1 Validator
+# :title:README file for Hecatae
+# = Name
+# Hecatae, the 3-in-1 Validator
+# = Last Modified
+#   Time-stamp: </Users/noah/Documents/github/hecatae/README last changed by Noah Sussman on noah.local/Textarcana Thursday 08 January 2009 at EST 13:33:59>
+# = Synopsis
+# A wrapper for Tidy, onSGMLS and Raakt.
+# = Description
+# 
+# = Todo
+# == Upcoming Features
+# 0. Nothing yet.
+# == Known Issues
+# 0. Tons of unmet dependencies including the W3 DTD library.
+# = References
+# == Validators
+# 0. Tidy [http://www.w3.org/People/Raggett/tidy/]
+# 0. onSGMLS [http://openjade.sourceforge.net/doc/nsgmls.htm]
+# 0. Raakt [http://www.peterkrantz.com/raakt/wiki/]
+# === Firefox Extensions
+# 0. HTML Validator [http://users.skynet.be/mgueury/mozilla/]
+# 0. Firefox Accessibility Extension [http://firefox.cita.uiuc.edu/]
+# 0. WAVE Toolbar [http://wave.webaim.org/toolbar]
+# == Methodologies
+# 0. UWEM [http://www.wabcluster.org/uwem05/]
+# = License
+# This code is provided under the terms of the {MIT License.}[http://www.opensource.org/licenses/mit-license.php]
+#
+#--
+# This code is the proprietary intellectual property of its authors.  It is not intended for publication.
+#++
+# = Authors
+# Noah Sussman
+#
+require 'rubygems'
+# = 
+# ==
+# ==
+
+# To build and install, use
+#     gem build gemspec.rb 
+#     sudo gem install Hecatae-0.0.1.gem 
