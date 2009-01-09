@@ -10,15 +10,30 @@ Hecatae, the 3-in-1 Validator
     puts access.raakt_o(page)
 = Description
 A Ruby wrapper for three XHTML validation tools: Tidy, onSGMLS and Raakt.
+
 == How To Install
 To build and install, use
     gem build gemspec.rb 
     sudo gem install Hecatae-0.0.1.gem 
+
+=== Dependencies
+==== Commands
+* Tidy
+* OnSGMLS
+==== Gems
+* Raakt
+* Mechanize
+==== Config files
+* Tidy configuration file is expected to be found in the same directory as the script that is calling Hecatae
+* W3 DTDs are expected to be found in myapp/vendor/misc
+
+--
 = Todo
 == Upcoming Features
 0. Nothing yet.
 == Known Issues
-0. Tons of unmet dependencies including the W3 DTD library.
+0. None currently.
+++
 = References
 This gem source has been created using the boilerplate found on p257 of Practical Ruby Gems by David Berube.
 == Validators
