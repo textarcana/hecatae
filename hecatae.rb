@@ -1,16 +1,16 @@
 # Hecatae, the three-in-one 
 # validator, that is
 #--
-#-- Time-stamp: </Users/noah/Documents/n_s/tools/foo_tool/validation/hecatae-gem/hecatae2/hecatae.rb last changed by Noah Sussman on noah.local/Textarcana Thursday 08 January 2009 at EST 12:57:43>
-require 'rubygems'
+#-- Time-stamp: </Users/noah/github/hecatae/hecatae.rb last changed by Noah Sussman on Arithromancy.local/Textarcana Friday 09 January 2009 at EST 16:45:35>
 require 'open3'
-require 'mechanize'
-require 'raakt'
 require 'uri'
 require 'net/http'
+require 'rubygems'
+require 'mechanize'
+require 'raakt'
 #++
 
-#$pathHere = File.dirname(File.expand_path($0))
+$pathHere = File.dirname(File.expand_path($0))
 
 module Hecatae
 
@@ -116,9 +116,8 @@ module Hecatae
     # When using my preferred doctype, OpenJade requests the XHTML DTD from the W3 every time it is called.  This has resulted in my IP being banned from w3.org.  For now the workaround is to change the DTD /in the HTML/ to refer to a locally cached DTD (it is included with the validator distro needed to run openjade).
 
 
-
     def xhtmlp_s (htmlString)
-      jadeResult, jadeErr = Open3.popen3("onsgmls -E0 -s #{$pathHere}/w3/validator-0.8.2/htdocs/sgml-lib/xml.dcl -") { |stdin, stdout, stderr| 
+      jadeResult, jadeErr = Open3.popen3("onsgmls -E0 -s #{$pathHere}/../../vendor/misc/w3/validator-0.8.2/htdocs/sgml-lib/xml.dcl -") { |stdin, stdout, stderr| 
         stdin.puts htmlString
         stdin.close_write	#without this the script will hang  
         stderr.read
@@ -134,7 +133,7 @@ module Hecatae
 
     # ==Run OpenJade on string-ified HTML
     def htmlp_s (htmlString)
-      jadeResult, jadeErr = Open3.popen3("onsgmls -E0 -s #{$pathHere}/w3/validator-0.8.2/htdocs/sgml-lib/ISO-HTML/15445.dcl -") { |stdin, stdout, stderr| 
+      jadeResult, jadeErr = Open3.popen3("onsgmls -E0 -s #{$pathHere}/../../vendor/misc/w3/validator-0.8.2/htdocs/sgml-lib/ISO-HTML/15445.dcl -") { |stdin, stdout, stderr| 
         stdin.puts htmlString
         stdin.close_write
         stderr.read
